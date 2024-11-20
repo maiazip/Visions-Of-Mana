@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --color--primary: #FDFDFD;
+    --color--secondary: #d1a3ff;
+}
+
+
+header {
+    background-color: var(--color--primary);
+    color: var(--color--secondary);
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+main {
+    min-height: 100vh;
+    background: url(/bg.jpg) no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+}
+
+main h2 {
+    font-size: 4rem;
+    color: var(--color--secondary);
+    text-shadow: 1px 1px 1px 1px solid red;
+    
+}
