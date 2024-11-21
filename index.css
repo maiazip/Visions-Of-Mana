@@ -6,39 +6,102 @@
 }
 
 :root {
+    --color-black: #202020;
     --color--primary: #FDFDFD;
     --color--secondary: #d1a3ff;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
 header {
-    background-color: var(--color--primary);
+    background-color: rgba(255, 255, 255, 0.75);
     color: var(--color--secondary);
-    font-size: 2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    padding: 2rem;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    padding: 1rem 4rem;
 }
 
-nav {
+header>nav {
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+header a {
+    font-weight: bold;
+    color: var(--color--secondary);
+    font-size: 100;
+}
+
+
+.bg-img {
+    width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+}
+
+.call-to-action {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+
+.call-to-action a {
+    background-color: var(--color--secondary);
+    color: var(--color--primary);
+    border: 1px solid var(--color--primary);
+    font-weight: bold;
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
 }
 
 main {
-    min-height: 100vh;
-    background: url(/bg.jpg) no-repeat;
-    background-size: cover;
     display: flex;
-    align-items:center;
-    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100%;
+    gap: 2rem;
+    position: absolute;
+    top: 0;
 }
 
 main h2 {
     font-size: 4rem;
     color: var(--color--secondary);
-    text-shadow: 1px 1px 1px 1px solid red;
-    
+    text-align: center;
+    text-shadow: 0px 3px 3px var(--color-black);
+    -webkit-text-stroke: 1px var(--color-black);
 }
+
+footer {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 1.5rem;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
+  
+  footer > nav {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1.5rem;
+  }
+  
+  footer a {
+    color: var(--color--primary);
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
